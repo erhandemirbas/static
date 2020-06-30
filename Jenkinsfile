@@ -1,10 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Upload to AWS') {
+        stage('Build') {
             steps {
-                withAWS(region:'us-west-2', credentials: 'aws-static') {
-                        s3Upload(file:'index.html', bucket:'s3-bucket-for-jenkins', path:'')
+                ss 'echo "Hello World!"'
                 }
             }
         }
